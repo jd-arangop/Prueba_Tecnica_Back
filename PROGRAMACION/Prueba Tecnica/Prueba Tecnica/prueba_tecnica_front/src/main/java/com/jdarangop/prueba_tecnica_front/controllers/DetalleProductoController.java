@@ -3,6 +3,7 @@ package com.jdarangop.prueba_tecnica_front.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import com.jdarangop.prueba_tecnica_front.entities.DetalleId;
 import com.jdarangop.prueba_tecnica_front.services.DetalleProductoService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/detalles")
 public class DetalleProductoController {
     
