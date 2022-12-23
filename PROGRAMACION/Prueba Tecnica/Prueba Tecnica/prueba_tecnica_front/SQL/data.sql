@@ -12,13 +12,3 @@ insert into PRODUCTO_ENTITY (id_producto, nombre, precio, stock) values (1,'Play
 insert into PRODUCTO_ENTITY (id_producto, nombre, precio, stock) values (2,'Xbox One X',2190000, 35);
 insert into PRODUCTO_ENTITY (id_producto, nombre, precio, stock) values (3,'Nintendo Switch', 1890000, 50);
 insert into PRODUCTO_ENTITY (id_producto, nombre, precio, stock) values (4,'Steamdeck', 2590000, 3);
-
-insert into FACTURA_ENTITY (num_factura, cliente_id_cliente, fecha) values (1, 1, '2022-12-02');
-insert into FACTURA_ENTITY (num_factura, cliente_id_cliente, fecha) values (2, 2, '2022-12-01');
-insert into FACTURA_ENTITY (num_factura, cliente_id_cliente, fecha) values (3, 3, '2022-11-30');
-insert into FACTURA_ENTITY (num_factura, cliente_id_cliente, fecha) values (4, 4, '2022-11-29');
-
-insert into DETALLE_ENTITY (num_detalle, id_factura_num_factura, producto_id_producto, cantidad, precio) values (1, 1, 1, 1, 1990000);
-insert into DETALLE_ENTITY (num_detalle, id_factura_num_factura, producto_id_producto, cantidad, precio) values (2, 2, 2, 1, 1990000);
-insert into DETALLE_ENTITY (num_detalle, id_factura_num_factura, producto_id_producto, cantidad, precio) values (3, 3, 3, 1, 1990000);
-insert into DETALLE_ENTITY (num_detalle, id_factura_num_factura, producto_id_producto, cantidad, precio) values (4, 4, 4, 1, 1990000);
