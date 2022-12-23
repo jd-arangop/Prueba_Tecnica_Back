@@ -56,9 +56,15 @@ public class DetalleController {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public DetalleDTO create(@RequestBody DetalleDTO detalleDTO) throws Exception{
-        DetalleEntity detalleEntity = detalleService.createDetalle(modelMapper.map(detalleDTO, DetalleEntity.class));
-        return modelMapper.map(detalleEntity, DetalleDTO.class);
+    public List<DetalleDTO> create(@RequestBody List<DetalleDTO> detallesDTO) throws Exception{
+        List<DetalleEntity> detalleList = modelMapper.map(detallesDTO, new TypeToken<List<DetalleEntity>>(){
+        }.getType());
+
+        for (int i=0; i<detalleList.size();i++){
+            detalleService.createDetalle(detalleList.get(i));
+        }
+        
+        return detallesDTO;
     }
     
     @PutMapping
